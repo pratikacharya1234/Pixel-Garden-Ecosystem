@@ -6,7 +6,6 @@
 
 A browser-based ecosystem simulator where you can plant "pixel seeds" that grow into procedurally generated plants. The entire system runs client-side using JavaScript and HTML5 Canvas, requiring no backend database.
 
-![Garden Screenshot](pixel-garden.png)
 
 ## 🌟 Features
 
