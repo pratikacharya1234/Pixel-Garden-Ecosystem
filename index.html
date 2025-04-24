@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A browser-based ecosystem simulator where you can plant 'pixel seeds' that grow into procedurally generated plants. The entire system runs client-side using JavaScript and HTML5 Canvas, requiring no backend database.">
+    <meta name="author" content="Pratik Acharya">
+    <meta name="keywords" content="Pixel Garden, Ecosystem Simulator, Browser-based, JavaScript, HTML5 Canvas, Plant Simulation, Procedural Generation, Ecosystem Dynamics">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Garden Ecosystem</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Pixel Garden Ecosystem</h1>
+        <div class="controls">
+            <div class="seed-selector">
+                <h3>Plant Seeds:</h3>
+                <button class="seed-btn active" data-type="flower">Flower</button>
+                <button class="seed-btn" data-type="tree">Tree</button>
+                <button class="seed-btn" data-type="grass">Grass</button>
+                <button class="seed-btn" data-type="mushroom">Mushroom</button>
+            </div>
+            <div class="environment-controls">
+                <h3>Environment:</h3>
+                <button id="toggle-rain">Toggle Rain</button>
+                <button id="toggle-sun">Toggle Sun</button>
+                <button id="toggle-season">Season: Spring</button>
+                <button id="clear-garden">Clear Garden</button>
+            </div>
+            <div class="garden-actions">
+                <h3>Actions:</h3>
+                <button id="export-btn">Export Image</button>
+                <button id="save-btn">Save Garden</button>
+                <button id="load-btn">Load Garden</button>
+                <button id="share-btn">Share Garden</button>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="garden-container">
+            <canvas id="garden-canvas"></canvas>
+            <div id="tooltip" class="tooltip"></div>
+        </div>
+        <div class="info-panel">
+            <h3>Garden Information</h3>
+            <div id="garden-stats">
+                <p>Plants: <span id="plant-count">0</span></p>
+                <p>Moisture: <span id="moisture-level">50%</span></p>
+                <p>Sunlight: <span id="sunlight-level">Strong</span></p>
+            </div>
+            <div class="educational-info">
+                <h4>Ecosystem Dynamics</h4>
+                <p>Plants compete for resources such as water and sunlight. Each plant type has unique growth patterns and environmental preferences.</p>
+                <h4>How to Use</h4>
+                <p>Click on the canvas to plant seeds. Use the environment controls to affect growth conditions. Watch how your garden evolves over time!</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Interactive Pixel Garden Ecosystem - A procedurally generated plant simulation</p>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/plants.js"></script>
+    <script src="js/environment.js"></script>
+    <script src="js/canvas.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
